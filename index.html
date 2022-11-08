@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Nome Cognome</legend>
+        <input type="text" id="nomeCognome" name="nomeCognome">
+    </fieldset>
+
+    <fieldset>
+        <legend>Km da percorrere</legend>
+        <input type="number" id="km" name="km" min="0">
+    </fieldset>
+    
+    <fieldset>
+        <legend>Fascia d'età</legend>
+        <select name="categoriaEta" >
+        <option value="min" selected="selected">Minorenne</option>
+        <option value="mag">Maggiorenne</option>
+        <option value="over">Over 65</option>
+        </select>
+    </fieldset>
+
+    <input type="submit" value="Genera">
+
+    <input type="submit" value="Annulla">
+
+
+    <script src="main.js"></script>
+</body>
+</html>
