@@ -1,27 +1,45 @@
 
-let km = document.getElementById("km").value;
 
-console.log(km);
+var element = document.getElementById("genera");
 
-/* let age = prompt("How old are you?");
+element.addEventListener('click',
+    
+    function() {
+        var ob = document.getElementById("app");
+        ob.classList.add("block");
 
-let prcPerKm = 0.21;
+        let km = document.getElementById("km").value;
+        let age = document.getElementById("eta").value;
+        let prcPerKm = 0.21;
+        let underageDsc = 0.20;
+        let over65Dsc = 0.40;
+        if (age === "min") {
+            price = km * prcPerKm * (1 - underageDsc)
+        }
+        else if (age === "over") {
+            price = km * prcPerKm * (1- over65Dsc)
+        }
+        else {
+            price = km * prcPerKm
+        }
+        
+        let rndPrice = price.toFixed(2);
+        document.getElementById("getPrice").innerHTML = `${rndPrice}`;
+        let nom = document.getElementById("nomeCognome").value;
+        document.getElementById("addName").innerHTML = `${nom}`;
+    }
+);
 
-let underageDsc = 0.20;
+var annulla = document.getElementById("annulla");
 
-let over65Dsc = 0.40;
-
-if (age < 18) {
-    price = km * prcPerKm * (1 - underageDsc)
-}
-else if (age > 65) {
-    price = km * prcPerKm * (1- over65Dsc)
-}
-else {
-    price = km * prcPerKm
-}
-
-let rndPrice = price.toFixed(2);
+annulla.addEventListener('click',
+    
+    function() {
+        var ob = document.getElementById("app");
+        ob.classList.add("dis");
+        document.getElementById("frm1").reset();
+    }
+);
 
 
-document.getElementById("getPrice").innerHTML = `Your ticket's price is: ${rndPrice}`; */
+
